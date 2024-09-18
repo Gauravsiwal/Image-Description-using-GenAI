@@ -25,7 +25,7 @@ st.set_page_config(page_title="Text Description")
 
 st.header("Image to Text Application (Google Gemini)")
 input=st.text_input("Input Prompt: ",key="input")
-uploaded_file = st.file_uploader("📋 Upload an image...", 
+uploaded_file = st.file_uploader("Upload an image...", 
                                  type=["jpg", "jpeg", "png"])
  
 if uploaded_file is not None:
