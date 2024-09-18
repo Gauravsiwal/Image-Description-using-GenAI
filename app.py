@@ -37,7 +37,7 @@ else:
 submit=st.button("Run")
 
 if submit:
-    response=get_response(input,uploaded_file)
+    response=get_response(uploaded_file,input)
     st.subheader("The Response is")
     st.write(response)
 
