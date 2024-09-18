@@ -1,4 +1,5 @@
 import os
+import PIL.Image as img
 from langchain_core.messages import HumanMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 import streamlit as st
@@ -29,7 +30,7 @@ uploaded_file = st.file_uploader("Upload an image...",
                                  type=["jpg", "jpeg", "png"])
  
 if uploaded_file is not None:
-    image = Image.open(uploaded_file)
+    image = img.open(uploaded_file)
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 else:
     st.write("Image Not Uploaded")
