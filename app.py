@@ -30,7 +30,7 @@ def main():
                                     type=["jpg", "jpeg", "png"])
     
     if uploaded_file is not None:
-        image = img.open(uploaded_file)
+        image = img.open(uploaded_file) # DIsplay of the Image
         st.image(image, caption="Uploaded Image.", use_column_width=True)
     else:
         st.write("Image Not Uploaded")
@@ -38,7 +38,7 @@ def main():
     submit=st.button("Run")
 
     if submit:
-        response=get_response(uploaded_file,input)
+        response=get_response(uploaded_file, input)
         st.subheader("The Response is")
         st.write(response)
 
